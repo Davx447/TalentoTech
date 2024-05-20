@@ -25,3 +25,22 @@ class Empleado:
 
     def ObtenerNombreCompleto(self):
         return self.nombre +" "+ self.apellido
+     
+    def ConsultarSalario(self, pEmpleado):
+        for empleado in self.empleados:
+            if empleado == pEmpleado:
+                return empleado.salario
+        return None
+    
+    def quienEsJefeDeEmpleado(self, pEmpleado):
+        for empleado in self.empleados:
+            if empleado == pEmpleado:
+                return empleado.jefe
+        return None
+    
+    def AreaEmpleado(self, pEmpleado):
+
+        for empleado in self.empleados:
+            if empleado == pEmpleado:
+                return empleado.area
+        return None
